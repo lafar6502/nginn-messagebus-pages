@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Message bus on Oracle</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">nginn-messagebus</h1>
+        <p class="header"></p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/lafar6502/nginn-messagebus-pages/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/lafar6502/nginn-messagebus-pages/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/lafar6502/nginn-messagebus-pages">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/lafar6502">lafar6502</a></p>
+
+
+      </header>
+      <section>
+        <h3>
+<a name="a1" class="anchor" href="#"><span class="octicon octicon-link"></span></a>Running nginn-messagebus on Oracle database</h3>
+
+<h3><a name="features" class="anchor" href="#features"><span class="octicon octicon-link"></span></a>Supported features</h3>
+
+<p>NGinn-messagebus was originally designed to run on SQL Server and makes use of several SQL server-specific features, but it was possible to port it to Oracle database. The approach and database structure is almost identical and the set of supported functionalities remains the same. There are, however, quite a lot tiny differences in SQL syntax, the way Oracle handles queries or in how the driver works, that affect the overall system performance. For example, there are no batch inserts in Oracle and therefore we can't push all outgoing messages to database in one query. <br/>
+
+
+</p>
+
+<h3>
+
+<h3><a name="features" class="anchor" href="#features"><span class="octicon octicon-link"></span></a>Differences</h3>
+
+<p>There are no differences in the API or in the way messages are delivered to handlers and processed. The code that uses nginn-messagebus does not need to be recompiled or modified in any other way - everything should just work as with SQL Server. The only thing that differs is the configuration.
+</p>
+
+<h3>
+
+<a name="configuration" class="anchor" href="#configuration"><span class="octicon octicon-link"></span></a>Configuration</h3>
+<p>
+We're using the official Oracle .Net driver: "Oracle Data Provider for .NET, Managed Driver" that can be downloaded from <a href="http://www.oracle.com/technetwork/topics/dotnet/index-085163.html">their website</a>. Using ODP.Net package from NuGet is not recommended because it does not include a native "Oracle.ManagedDataAccessDTC.dll" library that is required for supporting distributed transaction and cooperation with System.Transactions API. <br/>
+So, the first step to using nginn-messagebus with Oracle driver is to add required binaries to your .Net project. NGinn-messagebus will not do that (it has no dependency on Oracle driver), so please install ODP.Net and add Oracle.ManagedDataAccess.dll to your depends. Make sure proper version (x86 or x64) of Oracle.ManagedDataAccessDTC.dll is present in the binaries directory.
+</p>
+<p>Next thing to do is configuration of connection strings. Below is an example that worked in our tests. There are other possible forms of Oracle connection strings but we didn't check them. Please note that the easiest way to configure NGinn-messagebus connection strings is to specify them in app.config file in connectionStrings section.</p>
+<pre>
+&lt;add name="oradb" connectionString="Data source=(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = 192.168.9.106)(PORT = 1521))(CONNECT_DATA =(SID = xe)));User ID=testuser;Password=PASS;" providerName="Oracle.DataAccess.Client" /&gt;
+	
+</pre>
+</p>
+
+
+      </section>
+      <footer>
+        <p><small></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>
