@@ -3,8 +3,8 @@ title: nginn-messagebus
 email: rafal.gwizdala@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   nginn-messagebus is a lightweight .Net message bus / ESB framework that provides reliable and performant messaging infrastructure for your applications and services. It uses a relational database as queue storage and builds on top of strong transactional/reliability guarantees provided by the database while making sure queue operations are as fast as possible.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://code.google.com/p/nginn-messagebus/" # the base hostname & protocol for your site
+baseurl: "/nginn-messagebus-pages/" # the subpath of your site, e.g. /blog/
+url: "http://lafar6502.github.io/nginn-messagebus-pages/" # the base hostname & protocol for your site
 twitter_username: 
 github_username:  lafar6502
 paginate: 5
