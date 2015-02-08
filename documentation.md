@@ -23,9 +23,9 @@ title: Doc TOC
 6. Supported databases
 7. [Sagas](sagas.html)
 8. http bridge
-9. Publish-subscribe
+9. [Publish-subscribe](pubsub.html)
 10. Static message routing
-11. http services
+11. Http services
 12. Error handling and recovery
 13. Scheduled messages
 14. [TTL](ttl.html)
@@ -35,10 +35,11 @@ title: Doc TOC
 github, compilation
 
 
-### Extras/experimental
+### Extras
 1. MongoDB support
 2. [Database structure](dbstruct.html)
 3. [Oracle database support](oraclesupport.html)
+4. [JSON http services](httpservices.html)
 
 
 
