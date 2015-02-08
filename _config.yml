@@ -7,7 +7,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://code.google.com/p/nginn-messagebus/" # the base hostname & protocol for your site
 twitter_username: 
 github_username:  lafar6502
-
+paginate: 5
 # Build settings
 markdown: kramdown
 
