@@ -10,12 +10,13 @@ title: Doc TOC
 2. Installation and configuration
  * [Installing](installing.html)
  * [Configuring with Castle Windsor](windsor_configuration.html)
+ * [Complete code example](code_example.html)
 3. Sending and receiving messages in your programs
 
 ### Features
 
 1. [Transactions](transactions.html)
-2. Load balancing
+2. [Load balancing](loadbalancing.html)
 3. Monitoring performance
 4. Event logging
 5. [Message sequences](sequences.html)
@@ -27,7 +28,7 @@ title: Doc TOC
 11. http services
 12. Error handling and recovery
 13. Scheduled messages
-14. TTL
+14. [TTL](ttl.html)
 15. Fluent config
   
 ### Development
