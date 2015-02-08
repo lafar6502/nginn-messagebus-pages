@@ -18,7 +18,7 @@ title: Doc TOC
 2. Load balancing
 3. Monitoring performance
 4. Event logging
-5. Message sequences
+5. [Message sequences](sequences.html)
 6. Supported databases
 7. [Sagas](sagas.html)
 8. http bridge
