@@ -26,7 +26,8 @@ so please install `ODP.Net` and add `Oracle.ManagedDataAccess.dll` to your depen
 Next thing to do is configuration of connection strings. Below is an example that worked in our tests. There are other possible forms of Oracle connection strings but we didn't check them. 
 Please note that the easiest way to configure NGinn-messagebus connection strings is to specify them in app.config file in connectionStrings section.
 
-```
+{% highlight xml %}
 <add name="oradb" connectionString="Data source=(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = 192.168.9.106)(PORT = 1521))(CONNECT_DATA =(SID = xe)));User ID=testuser;Password=PASS;" providerName="Oracle.DataAccess.Client" />
-```
+{% endhighlight %}
+
 
