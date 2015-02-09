@@ -11,7 +11,8 @@ title: Doc TOC
  * [Installing](installing.html)
  * [Configuring with Castle Windsor](windsor_configuration.html)
  * [Complete code example](code_example.html)
-3. Sending and receiving messages in your programs
+3. Sending and receiving messages in your programs 
+ * [see getting started](gettingstarted.html)
 
 ### Features
 
@@ -24,7 +25,7 @@ title: Doc TOC
 7. [Sagas](sagas.html)
 8. http bridge
 9. [Publish-subscribe](pubsub.html)
-10. Static message routing
+10. [Static message routing](staticrouting.html)
 11. Http services
 12. Error handling and recovery
 13. Scheduled messages
