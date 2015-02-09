@@ -2,29 +2,27 @@
 layout: page
 title: About
 ---
+nginn-messagebus is a lightweight .Net message bus / ESB framework that provides reliable and performant messaging 
+infrastructure for your applications and services. It uses a relational database as queue storage 
+and builds on top of strong transactional/reliability guarantees provided by the database while making sure queue operations are 
+as fast as possible.
 
-<p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
-</p>
+### Supported databases
+ * MS SQL Server
+ * Oracle
+ * upcoming support for Postgres (v 9.5)
 
-In the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+### Applications
+The primary use-case for nginn-messagebus is extending applications with asynchronous messaging infrastructure without introducing too
+many dependencies and technologies and to make everything 'just work'. We assume your application is built on top of a SQL database
+(MS SQL, Oracle, other) and so we use the database to provide message queuing functionality. almost for free, in the most desirable flavor
+(transactional, integrated with app logic, performance matching application needs and no maintenance). Nginn-messagebus can be used within
+single application to connect its internal components, or as an inter-process messaging tool.
 
-There are currently two themes built on Poole:
+### Cool features
+ * fully transactional - messaging is a part of your application logic and works seamlessly with your transactions
+ * super-performant if you use same database for your application data and message queues 
+ * built-in message scheduling (timers), retrying, ttl, sequences, pub-sub routing, load balancing, sagas (long-running transactions)
+ * powerful management tools - just use SQL for all queue operations
+ * friction-free, lightweight, clean design and simple API
 
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
-
-Learn more and contribute on [GitHub](https://github.com/poole).
-
-## Setup
-
-Some fun facts about the setup of this project include:
-
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
-
-Thanks for reading!
