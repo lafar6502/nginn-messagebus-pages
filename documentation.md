@@ -22,6 +22,10 @@ title: Doc TOC
 4. Event logging
 5. [Message sequences](sequences.html)
 6. Supported databases
+ * MS SQL Server
+ * [Oracle](oraclesupport.html)
+ * Postgres planned (waiting for 9.5 to implement 'skip locked rows')
+ * MongoDB (non transactional)
 7. [Sagas](sagas.html)
 8. http bridge
 9. [Publish-subscribe](pubsub.html)
