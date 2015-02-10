@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Doc TOC
+title: Documentation
 ---
 
 ### Introduction

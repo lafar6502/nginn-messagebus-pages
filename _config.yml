@@ -1,9 +1,11 @@
 # Site settings
+markdown: redcarpet
+highlight: pygments
 title: nginn-messagebus
 email: rafal.gwizdala@gmail.com
 tagline: lightweight .Net message bus
 description: > # this means to ignore newlines until "baseurl:"
- <b>nginn-messagebus</b> is a lightweight .Net message bus / ESB framework that provides reliable and performant messaging infrastructure for your applications and services. It uses a relational database as queue storage and builds on top of strong transactional/reliability guarantees provided by the database while making sure queue operations are as fast as possible.
+ is a lightweight .Net message bus / ESB framework that provides reliable and performant messaging infrastructure for your applications and services.
 baseurl: "/nginn-messagebus-pages/" # the subpath of your site, e.g. /blog/
 paginate: 5
 # Build settings
