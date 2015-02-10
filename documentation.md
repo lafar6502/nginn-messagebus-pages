@@ -10,7 +10,7 @@ title: Documentation
 2. Installation and configuration
  * [Installing](installing.html)
  * [Configuring with Castle Windsor](windsor_configuration.html)
- * [Complete code example](code_example.html)
+ * [Complete code example](https://code.google.com/p/nginn-messagebus/source/browse/examples/BasicPingPongExample/Program.cs)
 3. Sending and receiving messages in your programs 
  * [see getting started](gettingstarted.html)
 
